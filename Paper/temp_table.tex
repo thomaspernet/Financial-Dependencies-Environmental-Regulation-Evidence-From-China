@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,
+ulem,graphicx,color,setspace,sectsty,comment,footmisc,
+natbib,pdflscape,subfigure,array,hyperref, booktabs,
+threeparttable, siunitx, adjustbox, natbib}
+%https://www.stefaanlippens.net/latex-trick-customizing-captions.html
+\usepackage[font=sf, labelfont={sf,bf}, margin=1cm, justification=raggedright,singlelinecheck=false]{caption}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section{Results of the effect of financial dependencies on the emission of SO2} \label{sec:result}
+
+\subsection{Main results}
+
+Our primary interest is to assess the impact of credit access on the emissions of SO2 in the context of tighter environmental regulations. Table \ref{tab:table2} reports the baseline regression (equation \ref{eq:main}). Columns 1 and 2 focus on the log of SO2 emissions at the city-industry-year level. Columns 3 and 4 focus on the log of SO2 emission divided by the value-added at the city-industry-year level, which is called \textit{SO2 intensity}. All of the regressions include an extensive range of fixed effects to control for time, city, and industry characteristics. 
+
+\begin{table}[htbp]\centering
+\resizebox{\textwidth}{!}{
+%\begin{adjustbox}{width=\columnwidth,center}
+\begin{threeparttable}   
+  \caption{\small The effect of environmental regulation and financial dependency on the emission of SO2, baseline regression}
+
+  \begin{tabular}{l*{4}{c}}
+  
+    \toprule
+     
+    & \multicolumn{4}{c}{} \\ 
+    \hline
+    & \multicolumn{2}{c}{Ln SO2} & \multicolumn{2}{c}{Ln SO2 intensity} \\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline 
+
+  $\text{Financial dep.}_k$ x Post x $\text{SO2 mandate}_c$ & $-$0.354$^{*}$ & $-$0.514$^{**}$ & $-$0.415$^{*}$ & $-$0.601$^{***}$ \\ 
+  & (0.208) & (0.200) & (0.213) & (0.207) \\
+  $\text{Ln output}_{ckt}$ & 0.509$^{***}$ & 0.486$^{***}$ & 0.473$^{***}$ & 0.456$^{***}$ \\ 
+  & (0.027) & (0.029) & (0.026) & (0.031) \\ 
+  $\text{Ln fixed asset}_{ckt}$ & 0.034 & 0.049$^{*}$ & $-$0.221$^{***}$ & $-$0.214$^{***}$ \\ 
+  & (0.030) & (0.026) & (0.040) & (0.035) \\ 
+  $\text{Ln employment}_{ckt}$ & 0.082$^{**}$ & 0.076$^{**}$ & $-$0.548$^{***}$ & $-$0.547$^{***}$ \\ 
+  & (0.035) & (0.038) & (0.047) & (0.055) \\  
+\midrule
+
+City-year fixed effects & Yes & Yes & Yes & Yes \\ 
+Industry-year fixed effects & Yes & Yes & Yes & Yes \\ 
+City-industry fixed effects & Yes & Yes & Yes & Yes \\ 
+Observations & 25,404 & 18,509 & 25,404 & 18,509 \\ 
+R$^{2}$ & 0.889 & 0.866 & 0.869 & 0.860 \\  
+
+\bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+      \small
+      \item SO2 intensity is computed as the total SO2 emission by city-industry-year divided by value added. SO2 city mandate measures the total amount of SO2 a city needs to reduce by the end of the 11th FYP. Columns 2 and 4 exclude the top and bottom 4 most polluted sectors in 2002.
+ * Significance at the 10\%, ** Significance at the 5\%, *** Significance at the 1\%. Heteroskedasticity-robust standard errors in parentheses are two-way clustered by city and by industry.
+    \end{tablenotes}
+    \label{tab:table2}
+\end{threeparttable}
+}
+%\end{adjustbox}
+\end{table}
+
+The first row of table \ref{tab:table2} represents our coefficient of interest, the interaction between the sector reliance on external financing, environmental regulation, and the period of the 11th FYP. All of the coefficients are negative and significant. The coefficient of the triple interaction term is larger for *SO2 intensity*, which suggests that the environmental performance has to be scaled down according to the production scale. In columns 2 and 4, we ensure that extreme sectors do not drive our results. Therefore, we removed the top and bottom polluted sectors in 2002.\footnote{We excluded the following four least (most) polluted sectors: Furniture, Artwork and Other Manufacturing, Printing, Reproduction of Recording Media, Electrical Machinery and Equipment, Smelting and Pressing of Non-ferrous Metals, Raw Chemical Materials and Chemical Products, Smelting and Pressing of Ferrous Metals and  Non-metallic Mineral Products.}. The coefficients of SO2 and SO2 intensity become larger and they remain significant at 5\% and 10\%, respectively. Overall, these results suggest that in a highly regulated area, banks tend to re-allocate credits to firms that obey the environmental policies.
+
+The coefficient in column 1 means that the requirement of a  reduction by one standard deviation above the mean (which represents 1500 tons of SO2) leads to a reduction of pollution emission by 3.54\%. The mean pollution being set equal to 11,000 tons in 2005, this implies a reduction of S02 emissions by 4000 tons (11.000 times 0.0354). Researchers have estimated that the external damage cost of one ton of sulfur dioxide to be equivalent to \$7228. \footnote{This number, which represents the cost of SO2 emitted per ton in different years, varies across studies. Greenpeace estimates the cost of SO2 per ton to be \$4356 for non-European countries. According to the OECD and for a sample of  14 European countries, it is about \$9557. For the European Union, which refers to a city of 100,000 population, it reaches \$7770. Therefore, we take the average of these three values in 2007 for the year  2007 and we use the euro/USD exchange rate of 1.11. } An increase of the reduction mandate by 1 standard deviation can therefore be valued at 29 million USD per year (7228 x 4000).  
+
+To illustrate the difference between a sector that is financially dependent on credit relative to a sector that is not, we compare the value of the 10th percentile of the variable $\text{Financial Dependencies}$ and the 90th percentile. The 10th percentile in the data corresponds to the \textit{Leather and fur} industry, and the 90th is \textit{Paper}. We set the increase of SO2 reduction mandate to 1.500 tons (roughly one standard deviation), and $\alpha= -.354$. Taking everything being equal, the key point is that the differential impact between the 90th and 10th percentiles of financial dependence \footnote{The value of the 10th quantile for  $\text{Financial Dependencies}$ is $-1.11$ and for the 90th quantile is 0.07} is equal to -7.19\% for an increase of 1.500 tons of SO2 mandate, which is strongly negative and significant \footnote{The quantile point estimate formula is the following: $value \times \alpha \times (\text{Financial Dependencies}_{90^{th}} - \text{Financial Dependencies}_{10^{th}})$. The point estimate is calculated by $1500/10000 * -.354 * (0.03 + 1.324 )) * 100$ . $-.354$ is the $\alpha$ coefficient from table 1, column 1}.
+
+In addition to the triple interaction terms and the fixed effects, our specification controls for variables that vary across time, city, and industry. We include the output, fixed asset, and employment variables aggregated at the city, industry year level. Rapid economic development has severely degraded the environment. The coefficient of the output is highly significant and positively correlated with SO2 and SO2 intensity, which puts high pressure on the environment. Employment and fixed assets are positively correlated with SO2 and negatively correlated with SO2 intensity. Including these variables does not affect our coefficient of interest.
+
+
+\end{document}
