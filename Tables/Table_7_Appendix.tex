@@ -1,0 +1,71 @@
+\documentclass[
+  convert={
+    density=800 -alpha deactivate,
+    size=1080x800,
+    outext=.png
+  },
+]{standalone}
+%%% Above code to capture table only
+%%% Export png, go to logs and output files, Other logs & files then png
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable}
+\usepackage{siunitx}
+\captionsetup{labelfont=bf,
+              justification=raggedright,
+              singlelinecheck=false}
+\begin{document}
+
+\centering
+\begin{table}[htbp]\centering
+\resizebox{1\textwidth}{!}{
+\begin{threeparttable}   
+\caption{\small SO2 Industry share, 2005}
+\begin{tabular}{l*{2}{c}}
+\toprule
+& \multicolumn{2}{c}{} \\ 
+\hline
+\\[-1.8ex] & CIC & Value \\ 
+\midrule
+Non-metallic Mineral Products &	31&	0.2340\\ 
+Smelting and Pressing of Ferrous Metals	&32	&0.1983\\ 
+Raw Chemical Materials and Chemical Products&	26	&0.1611\\ 
+Processing of Petroleum, Coking, Processing of Nuclear Fuel	&25	&0.0910\\ 
+Smelting and Pressing of Non-ferrous Metals	&33&	0.0855\\ 
+Paper and Paper Products&	22&	0.0577\\ 
+Textile	&17	&0.0407\\ 
+Chemical Fibers&	28	&0.0222\\ 
+Processing of Food from Agricultural Products&	13	&0.0199\\ 
+Beverages&	15	&0.0130\\ 
+Foods	&14	&0.0123\\ 
+Medicines&	27	&0.0089\\ 
+General Purpose Machinery	&35&	0.0089\\ 
+Processing of Timber, Manufacture of Wood,Bamboo, Rattan, Palm, and Straw Products	&20	&0.0065\\ 
+Rubber	&29&	0.0063\\ 
+Transport Equipment&	37&	0.0061\\ 
+Special Purpose Machinery&	36&	0.0050\\ 
+Electrical Machinery and Equipment&	39&	0.0038\\ 
+Metal Products&	34	&0.0037\\ 
+Leather, Fur, Feather and Related Products	&19	&0.0029\\ 
+Communication Equipment, Computers and Other Electronic Equipment&	40&	0.0025\\ 
+Textile Wearing Apparel, Footwear, and Caps	&18&	0.0022\\ 
+Measuring Instruments and Machinery for Cultural Activity and Office Work	&41&	0.0020\\ 
+Plastics&	30&	0.0018 \\ 
+Tobacco&	16&	0.0016\\ 
+Artwork and Other Manufacturing&	42	&0.0007\\ 
+Furniture&	21&	0.0006\\ 
+Articles For Culture, Education and Sport Activity&	24&	0.0004\\ 
+Printing, Reproduction of Recording Media&	23&	0.0004\\ 
+
+\hline
+\end{tabular}
+\begin{tablenotes}
+      \small
+      \item The share is computed for 28 industries. \\
+      Source: MEP dataset. Author's own computation 
+    \end{tablenotes}
+\label{tab:so2share}
+\end{threeparttable}}
+\end{table}
+
+
+\end{document}

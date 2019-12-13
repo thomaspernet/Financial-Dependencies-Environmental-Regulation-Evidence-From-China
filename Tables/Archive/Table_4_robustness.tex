@@ -1,0 +1,86 @@
+\documentclass[
+  convert={
+    density=800 -alpha deactivate,
+    size=1080x800,
+    outext=.png
+  },
+]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+%%% Above code to capture table only
+%%% Export png, go to logs and output files, Other logs & files then png
+%https://tex.stackexchange.com/questions/26351/create-a-table-with-two-parts-with-different-tabular-features
+%https://tex.stackexchange.com/questions/461918/silencing-overfull-hbox-warning-for-listing-in-adjustbox
+\captionsetup{labelfont=bf,
+              justification=raggedright,
+              singlelinecheck=false}
+              
+\begin{document}
+
+\centering              
+%\begin{table}[ht]
+\begin{table}[htbp]\centering
+\resizebox{1\textwidth}{!}{
+\begin{threeparttable}   
+  \caption{\small The effect of environmental regulation and financial dependency on the emission of SO2, Heterogeneous effect}
+
+  \begin{tabular}{l*{6}{c}}
+    
+    \multicolumn{1}{l}{\textbf{Panel A: Ln SO2}} \\
+    
+    \toprule
+     
+    & \multicolumn{6}{c}{} \\ 
+    \hline
+    & \multicolumn{1}{c}{SOE} & \multicolumn{1}{c}{Private}
+    & \multicolumn{1}{c}{Foreign} & \multicolumn{1}{c}{Domestic}
+    & \multicolumn{1}{c}{Large}& \multicolumn{1}{c}{Small}
+    \\ 
+    \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)  \\ 
+    \hline    
+    $\text{Financial dep.}_k$ x Post x $\text{SO2 mandate}_c$ & $-$0.494 & $-$0.413$^{*}$ & $-$0.081 & $-$0.716$^{*}$  & $-$0.313$^{**}$ & $-$0.513 \\ 
+  & (0.745)& (0.227) & (0.248)&(0.366)  & (0.158) & (0.749) \\  
+    \midrule
+    City-year fixed effects & Yes & Yes & Yes & Yes & yes & yes \\ 
+    Industry-year fixed effects & Yes & Yes & Yes & Yes & yes & yes \\ 
+    City-industry fixed effects & Yes & Yes & Yes & Yes & yes & yes \\ 
+    Observations & 6,216& 19,188 & 7,614 & 17,790  & 21,014 & 4,390 \\ 
+    R$^{2}$ & 0.957 & 0.903 & 0.941 & 0.897 & 0.895 & 0.921 \\  
+    \bottomrule     
+    \\ %%% Create second table
+    
+    \multicolumn{1}{l}{\textbf{Panel B: Ln SO2 intensity}} \\
+    \toprule
+    
+    & \multicolumn{6}{c}{} \\ 
+    \hline
+    & \multicolumn{1}{c}{SOE} & \multicolumn{1}{c}{Private}
+    & \multicolumn{1}{c}{Foreign} & \multicolumn{1}{c}{Domestic}
+    & \multicolumn{1}{c}{Large}& \multicolumn{1}{c}{Small}
+    \\ 
+    \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)  \\ 
+    \hline 
+      
+    $\text{Financial dep.}_k$ x Post x $\text{SO2 mandate}_c$ & $-$0.531& $-$0.420$^{*}$ & $-$0.163 & $-$0.699$^{*}$ & $-$0.357$^{*}$ & $-$0.539 \\ 
+  & (0.765) & (0.251) & (0.311) & (0.419) & (0.184) & (0.716) \\
+    \midrule 
+    
+    City-year fixed effects & Yes & Yes & Yes & Yes & yes & yes \\ 
+    Industry-year fixed effects & Yes & Yes & Yes & Yes & yes & yes \\ 
+    City-industry fixed effects & Yes & Yes & Yes & Yes & yes & yes \\ 
+    Observations & 6,216 & 19,188 & 7,614 & 17,790 & 21,014 & 4,390 \\ 
+    R$^{2}$ & 0.957 &0.903  & 0.941 & 0.897 & 0.895 & 0.921 \\ 
+    
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+      \small
+      \item For columns 1-4, we aggregate the output by ownership (SOE/Private/Domestic/foreign), sector and year. For columns 5 and 6, we use the sales to estimate the size. We restrict the sample to industries whose output/sales are higher than the yearly national median. \\
+      SO2 intensity is computed as the total SO2 emission by city-industry-year divided by value added. All columns controls for the output, fixed asset and employment computed at the city, industry, year level. \\
+      * Significance at the 10\%, ** Significance at the 5\%, *** Significance at the 1\%. Heteroskedasticity-robust standard errors in parentheses are two-way clustered by city and by industry.
+    \end{tablenotes}
+%\end{table}
+\end{threeparttable}}
+\end{table}
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[
+  convert={
+    density=800 -alpha deactivate,
+    size=1080x800,
+    outext=.png
+  },
+]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+%%% Above code to capture table only
+%%% Export png, go to logs and output files, Other logs & files then png
+%https://tex.stackexchange.com/questions/26351/create-a-table-with-two-parts-with-different-tabular-features
+%https://tex.stackexchange.com/questions/461918/silencing-overfull-hbox-warning-for-listing-in-adjustbox
+\captionsetup{labelfont=bf,
+              justification=raggedright,
+              singlelinecheck=false}
+              
+\begin{document}
+
+\centering              
+%\begin{table}[ht]
+\begin{table}[htbp]\centering
+\resizebox{1\textwidth}{!}{
+\begin{threeparttable}   
+  \caption{\small Summary Statistics by City-industry characteristics and City characteristics}
+
+  \begin{tabular}{l*{6}{c}}
+    
+    \multicolumn{1}{l}{\textbf{Panel A: City-industry characteristics}} \\
+    
+    \toprule
+     	 	 	 	 	
+    & \multicolumn{6}{c}{} \\ 
+    \hline
+    & \multicolumn{1}{c}{All cities} & \multicolumn{1}{c}{Coastal}
+    & \multicolumn{1}{c}{Southwest} & \multicolumn{1}{c}{Central}
+    & \multicolumn{1}{c}{Northwest}& \multicolumn{1}{c}{Northeast}
+    \\ 
+    \hline 
+    \midrule    
+     
+    SO2 & 10.619&	8.071	&18.349	&10.797	&14.493&	5.729\\
+    (1.000 tons) & (38.967)&	(21.644)&	(62.603)&	(30.878)&	(69.606)&	(18.347)\\
+    Output &9.31&	13.237	&7.882&	6.868&	6.412&	6.947\\
+    (10 millions USD) & (15.264)&	(18.175)&(13.788)&(12.115)&(12.201)&(13.293)\\
+    Fixed Asset & 70.319&	107.79&	44.952&	46.532&	44.799&	60.935\\
+    (10 millions USD) &(129.37)&	(170.661)	&(84.336)	&(80.473)	&(75.504)&	(125.573) \\
+    Employment &87.566&	151.077&	47.399&	55.559	&41.581&	51.515\\
+    (10 millions) & (175.665)	&(261.522)&	(70.894)&	(75.958)&	(61.494)&	(80.275)\\
+
+    \bottomrule     
+    \\ %%% Create second table
+    
+    \multicolumn{1}{l}{\textbf{Panel B: City characteristics}} \\
+    \toprule
+    
+    & \multicolumn{6}{c}{} \\ 
+    \hline
+    & \multicolumn{1}{c}{All cities} & \multicolumn{1}{c}{Coastal}
+    & \multicolumn{1}{c}{Southwest} & \multicolumn{1}{c}{Central}
+    & \multicolumn{1}{c}{Northwest}& \multicolumn{1}{c}{Northeast}
+    \\ 
+    \hline 
+    \midrule 
+    
+    City Mandate &	1.245&	1.657&	1.658&	0.938&	0.728	&0.628\\
+    (1.000 tons)&	(1.610)&	(1.731)&	(2.474)	&(1.078)	&(0.808)	&(0.739)\\
+    \bottomrule
+    
+    Total Cities&	284&	87&	45&	80	&38	&34\\
+    Observations &	25404&	9314&	3569&	6971&	2514&	3036\\
+    \hline
+  \end{tabular}
+  \begin{tablenotes}
+      \small
+      \item Panel A provides a summary statistics for the variables that vary by city-industry-year. Panel B shows the key statistic for the variable varying with city only. The first row represents the average by variables. The standard deviations are presented in parentheses. \\
+      Sources: MEP dataset and ASIF dataset. Author's own computation 
+    \end{tablenotes}
+\label{tab:table1}
+\end{threeparttable}}
+\end{table} 
+\end{document}

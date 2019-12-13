@@ -1,0 +1,69 @@
+\documentclass[
+  convert={
+    density=800 -alpha deactivate,
+    size=1080x800,
+    outext=.png
+  },
+]{standalone}
+%%% Above code to capture table only
+%%% Export png, go to logs and output files, Other logs & files then png
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable}
+\usepackage{siunitx}
+\captionsetup{labelfont=bf,
+              justification=raggedright,
+              singlelinecheck=false}
+\begin{document}
+
+\centering
+\begin{table}[htbp]\centering
+\resizebox{1\textwidth}{!}{
+\begin{threeparttable}        % <===
+\caption{\small External Finance Dependence Chinese Data}
+\begin{tabular}{l*{2}{c}}
+\toprule
+& \multicolumn{2}{c}{} \\ 
+\hline
+\\[-1.8ex] & CIC & Value \\ 
+\midrule
+General Purpose Machinery &	35 &		-2.59\\ 
+Tobacco	 &	16 &		-1.54\\ 
+Measuring Instruments and Machinery for Cultural Activity and Office Work &		41 &		-1.34\\ 
+Textile Wearing Apparel, Footwear, and Caps &		18 &		-1.32\\ 
+Leather, Fur, Feather and Related Products &		19	 &	-1.11\\ 
+Metal Products &		34 &		-0.93\\ 
+Printing, Reproduction of Recording Media &		23	 &	-0.8\\ 
+Beverages &		15 &		-0.72\\ 
+Processing of Timber, Manufacture of Wood,Bamboo, Rattan, Palm, and Straw Products &		20	 &	-0.72\\
+Transport Equipment &		37	 &	-0.72\\ 
+Furniture &		21 &		-0.65\\ 
+Artwork and Other Manufacturing	 &	42 &		-0.62\\ 
+Textile &		17 &		-0.48\\ 
+Processing of Food from Agricultural Products &		13	 &	-0.47\\ 
+Plastics &		30	 &	-0.47\\ 
+Medicines &		27	 &	-0.44\\ 
+Electrical Machinery and Equipment &		39 &		-0.44\\ 
+Chemical Fibers &		28	 &	-0.41\\ 
+Articles For Culture, Education and Sport Activity &		24	 &	-0.4\\ 
+Foods &		14 &		-0.32\\ 
+Non-metallic Mineral Products &		31 &		-0.29\\ 
+Special Purpose Machinery &		36 &		-0.27\\ 
+Rubber &		29	 &	-0.26\\ 
+Raw Chemical Materials and Chemical Products &		26 &		-0.23\\ 
+Smelting and Pressing of Non-ferrous Metals &		33 &		-0.1\\ 
+Communication Equipment, Computers and Other Electronic Equipment &		40 &		0.02\\ 
+Paper and Paper Products &		22	 &	0.07\\ 
+Smelting and Pressing of Ferrous Metals &		32 &		0.33\\ 
+Processing of Petroleum, Coking, Processing of Nuclear Fuel &		25 &		0.62\\ 
+
+\hline
+\end{tabular}
+\begin{tablenotes}
+      \small
+      \item  Based on Chinese data is calculated at the 2-digit Chinese Industrial Classification (CIC) level. 29 Data available in year 2004–2006 in the NBSC Database. Computation used the aggregate rather than the median external finance dependence at 2-digit industry level. One reason is the median firm in ASIF database often has no capital expenditure. 
+    \end{tablenotes}
+    \label{tab:findep}
+\end{threeparttable}}
+\end{table}
+
+\end{document}

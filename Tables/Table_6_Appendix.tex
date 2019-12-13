@@ -1,0 +1,87 @@
+\documentclass[
+  convert={
+    density=800 -alpha deactivate,
+    size=1080x800,
+    outext=.png
+  },
+]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,caption,threeparttable, siunitx, adjustbox}
+%%% Above code to capture table only
+%%% Export png, go to logs and output files, Other logs & files then png
+%https://tex.stackexchange.com/questions/26351/create-a-table-with-two-parts-with-different-tabular-features
+%https://tex.stackexchange.com/questions/461918/silencing-overfull-hbox-warning-for-listing-in-adjustbox
+\captionsetup{labelfont=bf,
+              justification=raggedright,
+              singlelinecheck=false}
+              
+\begin{document}
+
+\centering              
+%\begin{table}[ht]
+\begin{table}[htbp]\centering
+\resizebox{1\textwidth}{!}{
+\begin{threeparttable}   
+  \caption{\small Summary Statistics}
+
+  \begin{tabular}{l*{6}{c}}
+    
+    \multicolumn{1}{l}{\textbf{Panel A: City-industry characteristics, Pre-treatment}} \\
+    
+    \toprule
+     	 	 	 	 	
+    & \multicolumn{6}{c}{} \\ 
+    \hline
+    & \multicolumn{1}{c}{All cities} & \multicolumn{1}{c}{Coastal}
+    & \multicolumn{1}{c}{Southwest} & \multicolumn{1}{c}{Central}
+    & \multicolumn{1}{c}{Northwest}& \multicolumn{1}{c}{Northeast}
+    \\ 
+    \hline    
+     
+    SO2	&10.714	&8.287&	18.603&	10.769&	14.927&	5.427\\
+    (1.000 tons)&	41.972&	22.143&	67.687&	32.223&	79.032&	18.555\\
+    Output&	8.316	&11.952	&6.974	&5.963&	5.756&	6.23\\
+    (10 millions USD)&	14.154	&16.97&	12.541&	11.06&	11.469&	12.373\\
+    Fixed Asset&	65.328	&99.288	&43.921	&42.275	&43.305&	57.32\\
+    (10 millions USD)&	121.193	&156.946&	85.527	&75.01&	76.266&	123.671\\
+    Employment&	8.518&	14.38&	4.85&	5.475&	4.368&	5.148\\
+    (10 millions)&	16.306&	23.926&	0.744&	7.438&	6.612&	8.147\\
+
+    \bottomrule     
+    \\ %%% Create second table
+    
+    \multicolumn{1}{l}{\textbf{Panel B: City-industry characteristics, Post-treatment}} \\
+    \toprule
+    
+    & \multicolumn{6}{c}{} \\ 
+    \hline
+    & \multicolumn{1}{c}{All cities} & \multicolumn{1}{c}{Coastal}
+    & \multicolumn{1}{c}{Southwest} & \multicolumn{1}{c}{Central}
+    & \multicolumn{1}{c}{Northwest}& \multicolumn{1}{c}{Northeast}
+    \\ 
+    \hline 
+    \midrule 
+    
+    SO2	&10.423&	7.625&	17.851	&10.858&	13.675&	6.313\\
+    (1.000 tons)	&31.93	&20.571	&51.204&	27.697	&47.009	&17.934\\
+    Output&	11.348&	15.896	&9.663	&8.857&	7.647&	8.335\\
+    (10 millions USD)&	17.142&	20.19	&15.808	&13.959	&13.392&	14.822\\
+    Fixed Asset&	80.562&	125.389	&46.976	&55.895&	47.612&	67.936\\
+    (10 millions USD)&	144.177&	194.876	&81.947&	90.662&	74.009&	128.948\\
+    Employment&	9.246	&16.615	&4.525	&5.733&	3.763&	5.158\\
+    (10 millions)	&19.897&	30.192	&6.347	&7.795&	5.147&	7.843\\
+    \bottomrule
+
+  \end{tabular}
+  \begin{tablenotes}
+      \small
+      \item Panel A provides a summary statistics for the variables that vary by city-industry-year For the year 2002-2005 included. It is the pre-treatment period. Panel B provides a summary statistics for the variables that vary by city-industry-year For the year 2006-2007 . It is the post-treatment period.
+      
+      The first row represents the average by variables. The Standard deviations are presented in parentheses \\
+      Sources: MEP dataset and ASIF dataset. Author's own computation 
+    \end{tablenotes}
+    \label{tab:appendixperiod}
+\end{threeparttable}}
+\end{table}
+\end{document}
