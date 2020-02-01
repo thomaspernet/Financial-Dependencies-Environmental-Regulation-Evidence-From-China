@@ -24,4 +24,4 @@ Our results suggest that the government should act in favor of stringent and coo
 
 Second, we test whether our results are in line with the growing literature on the pollution haven hypothesis (PHH). Specifically, we construct a variable to capture the reallocation effect. We then divide each city in our sample dataset based on whether the environmental effort is large enough to provide an incentive for a firm to leave. Our results suggest that a stronger deterrent effect of environmental regulation leads firms to seek funding in less restricted provinces, confirming the pollution haven hypothesis (PVH). Our results are in line with previous works in the area (Hering 2014, Chen 2018, Shi 2018)
 
-![fig 1](https://github.com/thomaspernet/Financial-Dependencies-Environmental-Regulation-Evidence-From-China/blob/master/images/fig_1.png?raw=true)
+![fig 1](https://github.com/thomaspernet/Financial-Dependencies-Environmental-Regulation-Evidence-From-China/blob/master/Paper/images/fig_1.jpg)
