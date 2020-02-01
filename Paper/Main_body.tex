@@ -8,6 +8,15 @@ threeparttable, siunitx, adjustbox, natbib}
 \usepackage[font=sf, labelfont={sf,bf}, margin=1cm, justification=raggedright,singlelinecheck=false]{caption}
 
 \usepackage[utf8]{inputenc}
+
+%Change spacing between section
+\usepackage{titlesec}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
 \graphicspath{{Paper/images/}}
 
 %https://www.overleaf.com/learn/latex/Natbib_citation_styles
@@ -32,7 +41,7 @@ Mathilde Maurel\thanks{CNRS, France and Centre d'Economie de la Sorbonne, Univer
 \href{mailto:t.pernetcoudrier@gmail.com}{email: t.pernetcoudrier@gmail.com} 
 %email: \href{t.pernetcoudrier@gmail.com}
 }
-\and Zhao Ruili\thanks{Shanghai University of International Business and Economics, China}
+\and Ruili Zhao\thanks{International Business School, Shanghai University of International Business and Economics, China}
 }
 
 \date{}
@@ -87,7 +96,10 @@ The rest of this paper is organized as follows. The institutional background of 
     \centering
     \textbf{SO2 emission in China from 2000 to 2010}\par\medskip
     \includegraphics[width=0.5\textwidth]{fig_1}
-    \caption{Emission of SO2 in China for the period 2000 to 2010. \textbf{Note}: The horizontal line represents the beginning on the 11th FYP. Starting from 2006, China introduced more environmental severity with an optimistic target of 10\% reduction of SO2 emission in 2010 compared with the level of 2005.\\
+    \caption{
+    \small
+    Emission of SO2 in China for the period 2000 to 2010.
+    \textbf{Note}: The horizontal line represents the beginning on the 11th FYP. Starting from 2006, China introduced more environmental severity with an optimistic target of 10\% reduction of SO2 emission in 2010 compared with the level of 2005.\\
     \textbf{Source}: The SO2 emission data are from the \href{http://www.stats.gov.cn/english/Statisticaldata/AnnualData/}{China Statistical Yearbook (2000, 2010)}}
     \label{fig:figure1}
 \end{figure}
@@ -222,7 +234,10 @@ The level of SO2 emissions between sectors in China has remarkable variations. T
     \centering
     \textbf{Actual against targeted pollution reduction}\par\medskip
     \includegraphics[width=0.5\textwidth]{fig_2}
-    \caption{SO2 Reduction Targets and Actual Pollution Reduction, at the city level, are estimated according to the methodology proposed in section \ref{sec:mandate}.\textbf{Note}: Points in the figures represent cities. Y-axis is Log(SO2 emission in 2005 - SO2 emission in 2007)/(SO2 emission in 2005)). The line represents the fitted values. A positive trend indicates that cities with stringent reduction mandate managed to reduce the level of SO2 emitted in 2007 compared with 2005. \\
+    \caption{
+    \small
+    SO2 Reduction Targets and Actual Pollution Reduction, at the city level, are estimated according to the methodology proposed in section \ref{sec:mandate}.
+    \textbf{Note}: Points in the figures represent cities. Y-axis is Log(SO2 emission in 2005 - SO2 emission in 2007)/(SO2 emission in 2005)). The line represents the fitted values. A positive trend indicates that cities with stringent reduction mandate managed to reduce the level of SO2 emitted in 2007 compared with 2005. \\
     \textbf{Source: MEP Dataset}. Author's own computation}
     \label{fig:figure2}
 \end{figure}
@@ -233,7 +248,10 @@ We plot the relationship between the city’s reduction target and the variation
     \centering
     \textbf{Reliance of financial dependency and success of reduction pollution}\par\medskip
     \includegraphics[width=0.5\textwidth]{fig_3.jpg}
-    \caption{Financial Dependencies by sector and Actual Pollution Reduction. \textbf{Note}: Points in the figures represent 29 CIC sectors. Y-axis is Log(SO2 emission in 2005 - SO2 emission in 2007)/(SO2 emission in 2005)). The line represents the fitted values. A positive trend indicates that sectors relying on banks’ funding were more successful in reducing the level of SO2 emitted in 2007 compared with 2005. \\
+    \caption{
+    \small
+    Financial Dependencies by sector and Actual Pollution Reduction.
+    \textbf{Note}: Points in the figures represent 29 CIC sectors. Y-axis is Log(SO2 emission in 2005 - SO2 emission in 2007)/(SO2 emission in 2005)). The line represents the fitted values. A positive trend indicates that sectors relying on banks’ funding were more successful in reducing the level of SO2 emitted in 2007 compared with 2005. \\
     \textbf{Sources}: MEP Dataset and \cite{Fan2015-bm}. Author's own computation}
     \label{fig:figure3}
 \end{figure}
@@ -244,7 +262,9 @@ Our empirical approach links the financial dependencies with the stringency of t
     \centering
     \textbf{Financial dependencies and two economically identical cities with different environmental regulations}\par\medskip
     \includegraphics[width=0.7\textwidth]{fig_4.jpg}
-    \caption{Financial Dependencies by sector and Actual Pollution Reduction for two similar cities facing different reduction mandates.
+    \caption{
+    \small
+    Financial Dependencies by sector and Actual Pollution Reduction for two similar cities facing different reduction mandates.
     \textbf{Note}: Points in the figures represent 29 CIC sectors. Y-axis is Log(SO2 emission in 2005 - SO2 emission in 2007)/(SO2 emission in 2005)). The line represents the fitted values. A positive trend indicates that sectors relying on banks’ funding managed to reduce the level of SO2 emitted in 2007 compared with 2005. Both cities are similar in terms of GDP, Tangshan has to comply with an higher mandate. As a result, the slope of the line is steeper, suggesting that the impact of the financial vulnerability is stronger.\\
     \textbf{Sources}: MEP Dateset and \cite{Fan2015-bm}. Author's own computation
     }
@@ -260,7 +280,7 @@ In line with our expectations, the contribution to lower SO2 emission is stronge
 Our primary interest is to assess the impact of credit access on the emissions of SO2 in the context of tighter environmental regulations. Table \ref{tab:table2} reports the baseline regression (equation \ref{eq:main}). Columns 1 and 2 focus on the log of SO2 emissions at the city-industry-year level. Columns 3 and 4 focus on the log of SO2 emission divided by the value-added at the city-industry-year level, which is called \textit{SO2 intensity}. All of the regressions include an extensive range of fixed effects to control for time, city, and industry characteristics. 
 
 \begin{table}[hbt!]\centering
-\resizebox{\textwidth}{!}{
+\resizebox{1\textwidth}{!}{
 \begin{threeparttable}   
   \caption{\small The effect of environmental regulation and financial dependency on the emission of SO2, baseline regression}
 
@@ -315,7 +335,7 @@ In addition to the triple interaction terms and the fixed effects, our specifica
 Our identification strategy is biased if some omitted circumstances are driving the allocation of credit toward more responsible firms before the 2006 policy. For instance, as early as in 2005, cities were given policy recommendation for the production based on the level of SO2. Therefore, they could have anticipated the mandatory requirements of the 11th FYP by implementing them before 2006. To ensure that our specification does not pick up such a pre-trend anticipation effect, we replicate the estimates from table \ref{tab:table2} while changing the $Post$ variable with year-dummies set equal to one over the time span 2002–2007.
 
 \begin{table}[hbt!]\centering
-\resizebox{\textwidth}{!}{
+\resizebox{1\textwidth}{!}{
 \begin{threeparttable}   
   \caption{\small The effect of environmental regulation and financial dependency on the emission of SO2, testing the parallel trend assumption}
 
@@ -371,7 +391,7 @@ Column 1 in table \ref{tab:table4} validates our assumption —SOEs are not affe
 There is a large body of the literature on external borrowing, particularly mentioning the difference of credit access between domestic firms and foreign firms (\cite{Poncet2010-vv, Jarreau2014-lb, Manova2015-zk}). Foreign-owned companies are not confined to borrow money in China because they can use funds from their parent company to raise money on the capital market. Therefore, we seek to determine whether the regulation effect may be different for sectors dominated by foreign and domestic firms. Columns 3 and 4 report the results for Log SO2 (Panel A) and SO2 intensity (Panel B). As expected, the coefficient is negative but statistically insignificant for foreign industries, and it remained negative and large for domestic industries. 
 
 \begin{table}[hbt!]\centering
-\resizebox{\textwidth}{!}{
+\resizebox{1\textwidth}{!}{
 \begin{threeparttable}   
   \caption{\small The effect of environmental regulation and financial dependency on the emission of SO2, Heterogeneous effect}
 
@@ -442,7 +462,7 @@ In the last two columns, we estimate the effect of the size of the firm on acces
 In this section, we provide additional evidence of the reduction of SO2 emissions channeled through banks. We assume that environmental policies impose higher constraints on firms in industries that rely on credit. We investigate whether or not firms seek to circumvent the environmental regulation by relocating in cities with less environmental concerns and then moving away part of their polluting activities from the more regulated cities. Banks in the former cities do not discriminate against polluting firms (as they do in the later cities) by redistributing the credit. Relocation activities in China are fast and straightforward thanks to the recent industrial policies. According to \cite{Wang2013-tb} and \cite{Alder2016-rl}, the government poured billions of RMB locally to develop infrastructure, build highways, and improve the supply of utilities. In addition, the firm’s owners can decide to reduce the production in cities with strict environmental policies and invest in factories located in areas with lower environmental requirements.
 
 \begin{table}[hbt!]\centering
-\resizebox{\textwidth}{!}{
+\resizebox{1\textwidth}{!}{
 \begin{threeparttable}   
   \caption{\small The effect of environmental regulation and financial dependency on the emission of SO2, reallocation effect}
 
@@ -490,21 +510,22 @@ The spatial and temporal variations of the environmental policy enacted by the 1
 
 Pollution reduction is a notable concern in China. Every five years, the government introduces stricter environmental regulations. Our paper shows that financial institutions are vital players because they screen projects and choose to fund those projects that comply with environmental policies. However, the mobility of firms can shift the burden to locations where the regulations are more lax, leaving aside the banks' responsibility regarding the environment.
 
-
 \singlespacing
 \setlength\bibsep{0pt}
 %\nocite{*}
-\pagebreak
-\bibliographystyle{plainnat}
-\bibliography{Bibliography/Financial_dep_SO2.bib}
+%\pagebreak
 
 \clearpage
 
+\bibliographystyle{plainnat}
+\bibliography{Bibliography/Financial_dep_SO2.bib}
+
+%\clearpage
 
 \section*{Appendix} \label{sec:appendixa}
 \addcontentsline{toc}{section}{Appendix A}
 
-\begin{table}[hbt!]\centering
+\begin{table}[hbt]\centering
 \resizebox{\textwidth}{!}{
 \begin{threeparttable}   
   \caption{\small Summary Statistics}
@@ -569,7 +590,7 @@ Pollution reduction is a notable concern in China. Every five years, the governm
 \end{threeparttable}}
 \end{table}
 
-\begin{table}[hbt!]\centering
+\begin{table}[hbt]\centering
 \resizebox{\textwidth}{!}{
 \begin{threeparttable}   
 \caption{\small SO2 Industry share, 2005}
@@ -620,7 +641,7 @@ Printing, Reproduction of Recording Media&	23&	0.0004\\
 \end{threeparttable}}
 \end{table}
 
-\begin{table}[hbt!]\centering
+\begin{table}[hbt]\centering
 \resizebox{\textwidth}{!}{
 \begin{threeparttable}        % <===
 \caption{\small External Finance Dependence Chinese Data}
@@ -669,6 +690,9 @@ Processing of Petroleum, Coking, Processing of Nuclear Fuel &		25 &		0.62\\
     \label{tab:findep}
 \end{threeparttable}}
 \end{table}
+
+
+\clearpage
 
 \section*{List Figures/tables} \label{sec:appendixb}
 
