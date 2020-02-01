@@ -1,5 +1,24 @@
 # Financial-Dependencies-Environmental-Regulation-Evidence-From-China
 
+The full paper in PDF format can be downloaded from here: [Link](https://github.com/thomaspernet/Financial-Dependencies-Environmental-Regulation-Evidence-From-China/raw/master/Financial_Dependencies__Environmental_Regulation__and_Pollution_Intensity__Evidence_From_China.pdf)
+
+# Data
+
+
+
+The project's codes and documentions are available:
+
+- Data preprocessing main dataset
+  - [notebook](https://nbviewer.jupyter.org/github/thomaspernet/DataLab-JupyterNotebooks/blob/master/Notebook_dataprocessing/CreditConstraint_SO2_China_preprocessing.ipynb)
+  - [Source code](https://github.com/thomaspernet/DataLab-JupyterNotebooks/blob/master/Notebook_dataprocessing/python_programs/Pollution/SBC_pollution.py)
+- Data Analysis
+  - [notebook](https://nbviewer.jupyter.org/github/thomaspernet/DataLab-JupyterNotebooks/blob/master/Notebook_analysis_lab/Pollution_and_Credit_Constraint/Pollution_and_Credit_Constraint_analysis.ipynb)
+
+
+Main dataset and TFP dataset are available upon reques, or will soon be available through Binder.
+
+# Introduction
+
 The Global South, and more particularly China, is becoming increasingly responsible for global warming. Consequently, there is a growing awareness that a few important emerging countries such as China and India need to make a swift transition towards a cleaner model of economic growth, which is particularly challenging given the fast increase in a consumption-oriented middle class ([OECD report, Development Matters 2019](https://oecd-development-matters.org/2019/06/20/the-global-souths-contribution-to-the-climate-crisis-and-its-potential-solutions/) However, this challenge can also bring many opportunities. According to the [International Energy Agency’s World Energy Investment 2019 report](https://www.iea.org/wei2019/), "global power investment is shifting towards emerging and developing countries [with] remarkable investment in renewable … In most regions, low-carbon sources were the largest part of generation spending … [and] in India, total renewable power investment topped fossil fuel-based power for the third year in a row."
 
 Concern about environmental issues is also growing dramatically in China, which stands out because of its environmental disasters and poor air quality.
